@@ -2,7 +2,7 @@
 # https://github.com/openresty/docker-openresty
 
 ARG RESTY_IMAGE_BASE="ubuntu"
-ARG RESTY_IMAGE_TAG="20.04"
+ARG RESTY_IMAGE_TAG="22.10"
 
 FROM ${RESTY_IMAGE_BASE}:${RESTY_IMAGE_TAG}
 
@@ -77,6 +77,7 @@ RUN DEBIAN_FRONTEND=noninteractive apt-get update \
     libperl-dev \
     libreadline-dev \
     libxslt1-dev \
+    libdd-opentracing0\
     make \
     perl \
     unzip \
